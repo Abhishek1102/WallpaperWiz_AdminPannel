@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.wallpaperwizfirebaseadmin.R
 import com.example.wallpaperwizfirebaseadmin.databinding.ActivityMainBinding
+import com.example.wallpaperwizfirebaseadmin.helper.Utils
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,6 +15,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        Utils.blackIconStatusBar(this, R.color.black)
 
         initView()
 

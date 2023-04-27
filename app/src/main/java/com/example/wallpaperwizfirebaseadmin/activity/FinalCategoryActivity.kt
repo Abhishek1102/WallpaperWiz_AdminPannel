@@ -5,8 +5,10 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.wallpaperwizfirebaseadmin.R
 import com.example.wallpaperwizfirebaseadmin.adapter.FinalCategoryAdapter
 import com.example.wallpaperwizfirebaseadmin.databinding.ActivityFinalCategoryBinding
+import com.example.wallpaperwizfirebaseadmin.helper.Utils
 import com.example.wallpaperwizfirebaseadmin.model.BomModel
 import com.example.wallpaperwizfirebaseadmin.model.CategoriesModel
 import com.google.firebase.firestore.FirebaseFirestore
@@ -21,6 +23,7 @@ class FinalCategoryActivity : AppCompatActivity() {
         binding = ActivityFinalCategoryBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        Utils.blackIconStatusBar(this, R.color.black)
         initView()
 
     }

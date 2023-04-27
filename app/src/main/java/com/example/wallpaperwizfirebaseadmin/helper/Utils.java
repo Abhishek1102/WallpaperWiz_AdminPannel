@@ -17,6 +17,7 @@ public class Utils {
 
         //to change status bar icons color to white give visibility 0 and background color black or any
         activity.getWindow().getDecorView().setSystemUiVisibility(0);
+        //to change status bar icons color give color parameter as black or white or any you want it
         activity.getWindow().setStatusBarColor(ContextCompat.getColor(activity, color));
     }
 }

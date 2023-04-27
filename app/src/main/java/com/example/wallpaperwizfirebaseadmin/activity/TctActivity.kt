@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.wallpaperwizfirebaseadmin.R
 import com.example.wallpaperwizfirebaseadmin.adapter.TctAdapter
 import com.example.wallpaperwizfirebaseadmin.databinding.ActivityTctBinding
+import com.example.wallpaperwizfirebaseadmin.helper.Utils
 import com.example.wallpaperwizfirebaseadmin.model.TctModel
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -23,6 +24,7 @@ class TctActivity : AppCompatActivity() {
         binding = ActivityTctBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        Utils.blackIconStatusBar(this, R.color.black)
         initView()
 
     }

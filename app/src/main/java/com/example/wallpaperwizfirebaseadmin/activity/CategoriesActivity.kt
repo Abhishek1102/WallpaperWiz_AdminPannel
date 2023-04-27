@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.wallpaperwizfirebaseadmin.R
 import com.example.wallpaperwizfirebaseadmin.adapter.CategoriesAdapter
 import com.example.wallpaperwizfirebaseadmin.databinding.ActivityCategoriesBinding
+import com.example.wallpaperwizfirebaseadmin.helper.Utils
 import com.example.wallpaperwizfirebaseadmin.model.CategoriesModel
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -22,6 +23,7 @@ class CategoriesActivity : AppCompatActivity() {
         binding = ActivityCategoriesBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        Utils.blackIconStatusBar(this, R.color.black)
         initView()
 
     }
