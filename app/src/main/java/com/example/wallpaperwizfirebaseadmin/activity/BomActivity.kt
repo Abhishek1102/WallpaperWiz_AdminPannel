@@ -32,7 +32,8 @@ class BomActivity : AppCompatActivity() {
     private fun initView() {
 
         db= FirebaseFirestore.getInstance()
-        //snapshotlistener always recycle data few seconds that is the advantage of using it so no need to refresh
+
+        //snapshotlistener always recycle data few seconds that is the advantage of using it so no need to refresh the data
         db.collection("bestofthemonth").addSnapshotListener { value, error ->
             val list_bom = arrayListOf<BomModel>()
             val data = value!!.toObjects(BomModel::class.java)
