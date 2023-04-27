@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "379863268370",
+    "project_id": "wallpaper-wiz",
+    "storage_bucket": "wallpaper-wiz.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379863268370:android:fd9bedb478125e9c272ccb",
+        "android_client_info": {
+          "package_name": "com.example.wallpaperwiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "379863268370-9ggmj9gfjq2bqkd76bi29hmcq72vumcg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.wallpaperwiz",
+            "certificate_hash": "c641d150f28876c05680bcfa692af4eaecf6da30"
+          }
+        },
+        {
+          "client_id": "379863268370-521vh0npsun9gqdortmks88pnoi1g945.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZ919gBN3h1h567HZBVfLmgrvZ5cSCzBY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "379863268370-521vh0npsun9gqdortmks88pnoi1g945.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379863268370:android:2c7c957a77591fa6272ccb",
+        "android_client_info": {
+          "package_name": "com.example.wallpaperwizfirebaseadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "379863268370-521vh0npsun9gqdortmks88pnoi1g945.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZ919gBN3h1h567HZBVfLmgrvZ5cSCzBY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "379863268370-521vh0npsun9gqdortmks88pnoi1g945.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

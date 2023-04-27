@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.BomActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.example.wallpaperwizfirebaseadmin.customfont.CustomEdittext
+                android:id="@+id/edt_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Paste link here"
+                style="@style/black_16"
+                android:background="@drawable/edt_shape"
+                android:layout_margin="@dimen/_12sdp"
+                android:includeFontPadding="false"
+                android:maxLines="3"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:letterSpacing="0.02"
+                android:paddingVertical="@dimen/_10sdp"/>
+
+            <com.example.wallpaperwizfirebaseadmin.customfont.CustomTextViewSemiBold
+                android:id="@+id/tv_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                style="@style/white_16"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                android:background="@drawable/rounded_submit"
+                android:backgroundTint="@color/pink"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_margin="@dimen/_12sdp"
+                android:layout_gravity="end"
+                android:letterSpacing="0.02"
+                android:includeFontPadding="false"/>
+
+            <com.example.wallpaperwizfirebaseadmin.customfont.CustomTextViewBold
+                android:id="@+id/tv_categoryName"
+                style="@style/black_18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_8sdp"
+                android:includeFontPadding="false"
+                android:layout_margin="@dimen/_12sdp"
+                android:letterSpacing="0.02"
+                android:text="Nature" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_finalCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_12sdp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
