@@ -31,7 +31,7 @@ import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.QuerySnapshot
 import com.google.firebase.firestore.model.mutation.ArrayTransformOperation
 
-class FinalCategoryAdapter(val context: Context, val list: ArrayList<BomModel>,val uid: String):RecyclerView.Adapter<FinalCategoryAdapter.ViewHolder>() {
+class FinalPremiumAdapter(val context: Context, val list: ArrayList<BomModel>, val uid: String):RecyclerView.Adapter<FinalPremiumAdapter.ViewHolder>() {
 
     val db = FirebaseFirestore.getInstance()
 
@@ -42,7 +42,6 @@ class FinalCategoryAdapter(val context: Context, val list: ArrayList<BomModel>,v
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         Glide.with(context).load(list[position].link).into(holder.iv_finalCategory)
-
 
         holder.card_remove.setOnClickListener {
             val dialog = Dialog(context)
@@ -60,7 +59,7 @@ class FinalCategoryAdapter(val context: Context, val list: ArrayList<BomModel>,v
 
 
             yes.setOnClickListener {
-                val db_coll=db.collection("categories")
+                val db_coll=db.collection("premium")
 
                 val doc_query:Query = db_coll.document(uid).collection("wallpaper").whereEqualTo("id",list[position].id)
 
@@ -108,19 +107,3 @@ class FinalCategoryAdapter(val context: Context, val list: ArrayList<BomModel>,v
     }
 }
 
-
-//db.collection("bestofthemonth").document(list[position].id).delete().addOnCompleteListener {
-//    if (it.isSuccessful){
-////                        AppConstant.showProgressDialog(context)
-//        Handler().postDelayed({
-////                            AppConstant.hideProgressDialog()
-//            Toast.makeText(context, "Image deleted successfully", Toast.LENGTH_SHORT).show()
-//            dialog.dismiss()
-//        },1000)
-//    }
-//    else{
-////                        AppConstant.hideProgressDialog()
-//        Toast.makeText(context, "Error in deleting image", Toast.LENGTH_SHORT).show()
-//        d("TAG","Error ${it.exception!!.localizedMessage}")
-//    }
-//}

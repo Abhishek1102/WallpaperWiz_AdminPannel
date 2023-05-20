@@ -19,10 +19,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.wallpaperwizfirebaseadmin.R
 import com.example.wallpaperwizfirebaseadmin.activity.FinalCategoryActivity
+import com.example.wallpaperwizfirebaseadmin.activity.FinalPremiumActivity
 import com.example.wallpaperwizfirebaseadmin.helper.AppConstant
 import com.example.wallpaperwizfirebaseadmin.helper.AppConstant.Companion.dialog
 import com.example.wallpaperwizfirebaseadmin.model.BomModel
 import com.example.wallpaperwizfirebaseadmin.model.CategoriesModel
+import com.example.wallpaperwizfirebaseadmin.model.PremiumModel
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.OnSuccessListener
 import com.google.android.gms.tasks.Task
@@ -31,18 +33,25 @@ import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.QuerySnapshot
 import com.google.firebase.firestore.model.mutation.ArrayTransformOperation
 
-class FinalCategoryAdapter(val context: Context, val list: ArrayList<BomModel>,val uid: String):RecyclerView.Adapter<FinalCategoryAdapter.ViewHolder>() {
+class PremiumAdapter(val context: Context, val list: ArrayList<PremiumModel>):RecyclerView.Adapter<PremiumAdapter.ViewHolder>() {
 
     val db = FirebaseFirestore.getInstance()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.row_finalcategory,parent,false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.row_categories,parent,false)
         return ViewHolder(itemView)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        Glide.with(context).load(list[position].link).into(holder.iv_finalCategory)
+        Glide.with(context).load(list[position].link).into(holder.iv_categories)
+        holder.tv_categoriesName.text=list[position].name
 
+        holder.itemView.setOnClickListener {
+            val i = Intent(context,FinalPremiumActivity::class.java)
+            i.putExtra("uid",list[position].id)
+            i.putExtra("name",list[position].name)
+            context.startActivity(i)
+        }
 
         holder.card_remove.setOnClickListener {
             val dialog = Dialog(context)
@@ -60,9 +69,9 @@ class FinalCategoryAdapter(val context: Context, val list: ArrayList<BomModel>,v
 
 
             yes.setOnClickListener {
-                val db_coll=db.collection("categories")
+                val db_coll=db.collection("premium")
 
-                val doc_query:Query = db_coll.document(uid).collection("wallpaper").whereEqualTo("id",list[position].id)
+                val doc_query:Query = db_coll.whereEqualTo("id",list[position].id)
 
                 doc_query.get().addOnCompleteListener(object : OnCompleteListener<QuerySnapshot?> {
                     override fun onComplete(p0: Task<QuerySnapshot?>) {
@@ -70,10 +79,10 @@ class FinalCategoryAdapter(val context: Context, val list: ArrayList<BomModel>,v
                             for (document in p0.getResult()!!){
                                 document.getReference().delete().addOnSuccessListener {
                                     dialog.dismiss()
-                                    Toast.makeText(context, "Image deleted successfully", Toast.LENGTH_SHORT).show()
+                                    Toast.makeText(context, "Category deleted successfully", Toast.LENGTH_SHORT).show()
                                 }.addOnFailureListener {
                                     dialog.dismiss()
-                                    Toast.makeText(context, "Error in deleting image", Toast.LENGTH_SHORT).show()
+                                    Toast.makeText(context, "Error in deleting category", Toast.LENGTH_SHORT).show()
                                 }
                             }
                         }
@@ -103,8 +112,9 @@ class FinalCategoryAdapter(val context: Context, val list: ArrayList<BomModel>,v
     }
 
     class ViewHolder(itemView:View):RecyclerView.ViewHolder(itemView) {
-        val iv_finalCategory:ImageView = itemView.findViewById(R.id.iv_finalCategory)
+        val iv_categories:ImageView = itemView.findViewById(R.id.iv_categories)
         val card_remove:CardView = itemView.findViewById(R.id.card_remove)
+        val tv_categoriesName:TextView = itemView.findViewById(R.id.tv_categoriesName)
     }
 }
 

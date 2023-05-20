@@ -33,5 +33,8 @@ class MainActivity : AppCompatActivity() {
         binding.cardCategories.setOnClickListener {
             startActivity(Intent(this,CategoriesActivity::class.java))
         }
+        binding.cardPremium.setOnClickListener {
+            startActivity(Intent(this,PremiumActivity::class.java))
+        }
     }
 }
