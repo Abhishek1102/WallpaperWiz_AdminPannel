@@ -20,17 +20,24 @@ Cloud Storage:- Firebase FireStore
 
 ### SCREENSHOTS:-
 <img src="https://github.com/Abhishek1102/WallpaperWiz_AdminPannel/assets/71425576/5d742f60-90d7-4611-b4f0-9230b24c996f" width="250" height="500"> 
+</br>
 
 <img src="https://github.com/Abhishek1102/WallpaperWiz_AdminPannel/assets/71425576/aadc639a-3330-43cb-906c-db61e66d75e1" width="250" height="500"> 
+</br> 
 
 <img src="https://github.com/Abhishek1102/WallpaperWiz_AdminPannel/assets/71425576/aca0c78d-8cd6-4d3b-a0a1-4652349c941f" width="250" height="500"> 
+</br>
 
 <img src="https://github.com/Abhishek1102/WallpaperWiz_AdminPannel/assets/71425576/2eb47b43-1a63-4694-9974-397ce22037d7" width="250" height="500"> 
+</br>
 
 <img src="https://github.com/Abhishek1102/WallpaperWiz_AdminPannel/assets/71425576/10f562fe-fd3b-48ec-a973-f325f26ad65b" width="250" height="500"> 
+</br>
 
 <img src="https://github.com/Abhishek1102/WallpaperWiz_AdminPannel/assets/71425576/55725632-8d22-4441-9b20-88a78837a0c5" width="250" height="500"> 
+</br>
 
 <img src="https://github.com/Abhishek1102/WallpaperWiz_AdminPannel/assets/71425576/d28d8bae-cea9-459d-814a-8dcee7ce1b8d" width="250" height="500"> 
+</br>
 
 <img src="https://github.com/Abhishek1102/WallpaperWiz_AdminPannel/assets/71425576/62c1e4d5-b0b5-4e08-9f77-49886b4b090d" width="250" height="500"> 
